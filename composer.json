@@ -1,0 +1,38 @@
+{
+  "name": "zetta-code/zend-pagseguro",
+  "type": "library",
+  "description": "Suporte a utilização PagSeguro no zend Framework 3.",
+  "license": "MIT",
+  "keywords": [
+    "pagseguro",
+    "zf3"
+  ],
+  "homepage": "https://github.com/zetta-code/zend-pagseguro",
+  "authors": [
+    {
+      "name": "Thiago S. Santos",
+      "email": "thiagos.xsantos@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^5.6 || ^7.0",
+    "zendframework/zend-stdlib": "^3.0",
+    "pagseguro/pagseguro-php-sdk": "^3.0"
+  },
+  "require-dev": {
+    "zendframework/zend-mvc": "^3.0",
+    "zendframework/zend-form": "^2.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zetta\\ZendPagSeguro\\": "src/"
+    }
+  },
+  "extra": {
+    "zf": {
+      "component": "Zetta\\ZendPagSeguro",
+      "config-provider": "Zetta\\ZendPagSeguro\\ConfigProvider"
+    }
+  }
+}
