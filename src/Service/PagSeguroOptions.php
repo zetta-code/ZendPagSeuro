@@ -75,7 +75,7 @@ class PagSeguroOptions extends AbstractOptions
      */
     public function setEnvironment($environment)
     {
-        if ($environment === 'production' || $environment === 'sandbox') {
+        if ($environment !== 'production' && $environment !== 'sandbox') {
             $environment = 'sandbox';
         }
 
@@ -228,7 +228,7 @@ class PagSeguroOptions extends AbstractOptions
      */
     public function setCredential($credential)
     {
-        if ($credential === 'account' || $credential === 'application') {
+        if ($credential !== 'account' && $credential !== 'application') {
             $credential = 'account';
         }
 
