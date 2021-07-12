@@ -7,8 +7,8 @@
 namespace Zetta\ZendPagSeguro\Service;
 
 use Interop\Container\ContainerInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use PagSeguro\Library;
-use Zend\ServiceManager\Factory\FactoryInterface;
 
 class PagSeguroServiceFactory implements FactoryInterface
 {

@@ -16,13 +16,14 @@
     }
   ],
   "require": {
-    "php": "^5.6 || ^7.0",
-    "zendframework/zend-stdlib": "^3.0",
-    "pagseguro/pagseguro-php-sdk": "^3.0"
+    "php": "^7.4 || ^8.0",
+    "ext-gettext": "*",
+    "laminas/laminas-stdlib": "^3.4",
+    "pagseguro/pagseguro-php-sdk": "^3.4"
   },
   "require-dev": {
-    "zendframework/zend-mvc": "^3.0",
-    "zendframework/zend-form": "^2.10"
+    "laminas/laminas-mvc": "^3.2",
+    "laminas/laminas-form": "^3.0"
   },
   "autoload": {
     "psr-4": {
@@ -30,7 +31,7 @@
     }
   },
   "extra": {
-    "zf": {
+    "laminas": {
       "component": "Zetta\\ZendPagSeguro",
       "config-provider": "Zetta\\ZendPagSeguro\\ConfigProvider"
     }

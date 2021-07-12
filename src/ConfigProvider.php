@@ -6,8 +6,9 @@
 
 namespace Zetta\ZendPagSeguro;
 
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
-use Zend\ServiceManager\Proxy\LazyServiceFactory;
+use Laminas\ModuleManager\Feature\ConfigProviderInterface;
+use Laminas\ServiceManager\Proxy\LazyServiceFactory;
+use Traversable;
 use Zetta\ZendMPDF\View\Strategy\MpdfStrategy;
 
 class ConfigProvider implements ConfigProviderInterface
@@ -25,7 +26,7 @@ class ConfigProvider implements ConfigProviderInterface
     /**
      * Returns configuration to merge with application configuration
      *
-     * @return array|\Traversable
+     * @return array|Traversable
      */
     public function getConfig()
     {

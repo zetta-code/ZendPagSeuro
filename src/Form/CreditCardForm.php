@@ -6,7 +6,7 @@
 
 namespace Zetta\ZendPagSeguro\Form;
 
-use Zend\Form\Form;
+use Laminas\Form\Form;
 
 class CreditCardForm extends Form
 {
@@ -67,15 +67,15 @@ class CreditCardForm extends Form
                 'div' => ['class' => 'form-group', 'class_error' => 'has-error'],
                 'empty_option' => _('Month'),
                 'value_options' => [
-                     1 => _('01 - Janeiro'),
-                     2 => _('02 - Fevereiro'),
-                     3 => _('03 - Março'),
-                     4 => _('04 - Abril'),
-                     5 => _('05 - Maio'),
-                     6 => _('06 - Junho'),
-                     7 => _('07 - Julho'),
-                     8 => _('08 - Agosto'),
-                     9 => _('09 - Setembro'),
+                    1 => _('01 - Janeiro'),
+                    2 => _('02 - Fevereiro'),
+                    3 => _('03 - Março'),
+                    4 => _('04 - Abril'),
+                    5 => _('05 - Maio'),
+                    6 => _('06 - Junho'),
+                    7 => _('07 - Julho'),
+                    8 => _('08 - Agosto'),
+                    9 => _('09 - Setembro'),
                     10 => _('10 - Outubro'),
                     11 => _('11 - Novembro'),
                     12 => _('12 - Dezembro')

@@ -6,12 +6,14 @@
 
 namespace Zetta\ZendPagSeguro;
 
+use Traversable;
+
 class Module
 {
     /**
      * Returns configuration to merge with application configuration
      *
-     * @return array|\Traversable
+     * @return array|Traversable
      */
     public function getConfig()
     {

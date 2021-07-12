@@ -33,12 +33,12 @@ class PagSeguroService
     }
 
     /**
-     * @param  array|PagSeguroOptions $options
+     * @param array|PagSeguroOptions $options
      * @return PagSeguroService
      */
     public function setOptions($options)
     {
-        if (!$options instanceof PagSeguroOptions) {
+        if (! $options instanceof PagSeguroOptions) {
             $options = new PagSeguroOptions($options);
         }
 
@@ -49,21 +49,24 @@ class PagSeguroService
     /**
      * @return string
      */
-    public function getEnvironment() {
+    public function getEnvironment()
+    {
         return $this->options->getEnvironment();
     }
 
     /**
      * @return bool
      */
-    public function isSandbox() {
+    public function isSandbox()
+    {
         return $this->getEnvironment() === 'sandbox';
     }
 
     /**
      * @return Credentials
      */
-    public function getCredential() {
+    public function getCredential()
+    {
         if ($this->options->getCredential() === 'account') {
             return $this->options->getAccountCredentials();
         } elseif ($this->options->getCredential() === 'application') {

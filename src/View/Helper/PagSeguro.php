@@ -6,8 +6,9 @@
 
 namespace Zetta\ZendPagSeguro\View\Helper;
 
+use Exception;
+use Laminas\View\Helper\AbstractHelper;
 use PagSeguro\Services\Session;
-use Zend\View\Helper\AbstractHelper;
 use Zetta\ZendPagSeguro\Service\PagSeguroService;
 
 class PagSeguro extends AbstractHelper
@@ -21,12 +22,12 @@ class PagSeguro extends AbstractHelper
      * @var array
      */
     protected $resources = [
-        'production' =>[
+        'production' => [
             'js' => [
                 'directpayment' => 'https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js'
             ]
         ],
-        'sandbox' =>[
+        'sandbox' => [
             'js' => [
                 'directpayment' => 'https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js'
             ]
@@ -45,7 +46,7 @@ class PagSeguro extends AbstractHelper
     /**
      * @param null $name
      * @return string
-     * @throws \Exception
+     * @throws Exception
      */
     public function __invoke($name = null)
     {
@@ -57,7 +58,7 @@ class PagSeguro extends AbstractHelper
         if (method_exists($this, $getter)) {
             return $this->$getter();
         } else {
-            throw new \Exception(
+            throw new Exception(
                 sprintf(
                     'Property (%s) in (%s) is not accessible. You should implement %s::%s()',
                     $name,
@@ -77,7 +78,7 @@ class PagSeguro extends AbstractHelper
     public function getSessionIdScript()
     {
         $session = Session::create($this->pagSeguroService->getCredential());
-        $script = 'PagSeguroDirectPayment.setSessionId(\''. $session->getResult() . '\');';
+        $script = 'PagSeguroDirectPayment.setSessionId(\'' . $session->getResult() . '\');';
         return $script;
     }
 }

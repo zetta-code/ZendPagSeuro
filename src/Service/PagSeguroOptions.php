@@ -6,10 +6,10 @@
 
 namespace Zetta\ZendPagSeguro\Service;
 
+use Laminas\Stdlib\AbstractOptions;
 use PagSeguro\Configuration\Configure;
 use PagSeguro\Domains\AccountCredentials;
 use PagSeguro\Domains\ApplicationCredentials;
-use Zend\Stdlib\AbstractOptions;
 
 class PagSeguroOptions extends AbstractOptions
 {
